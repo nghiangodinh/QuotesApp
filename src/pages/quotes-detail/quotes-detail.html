@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Quotes Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>{{quoteDetail.quote}}</p>
+  <p text-right> - {{quoteDetail.author}}</p>
+
+  <ion-item (click)="twitterShare()">
+    <ion-icon name="logo-twitter">Share on Twitter</ion-icon>
+  </ion-item>
+</ion-content>

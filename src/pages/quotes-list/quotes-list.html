@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Quotes List</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-searchbar placeholder="Search Quotes..." #txtSearch></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let quote of quotesList | searchFilter: 'author': txtSearch.value" (click)="itemTapped($event, quote)">
+      <h2>{{quote.author}}</h2>
+      <p class="item-description">{{quote.quote}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
